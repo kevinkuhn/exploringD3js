@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>D3 Test</title>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+</body>
+
+<footer>
+	<script type="text/javascript">
+
+	// Adding Title to the top of the page
+	var body = d3.select("body");
+	var div = body.append("div");
+	div.html("<h2>Let’s Make a Bar Chart</h2>");
+
+	// Changing Background Color
+	d3.select("body")
+    .style("color", "black")
+    .style("background-color", "white");
+
+	// Defining variables
+	var data = [4, 8, 15, 16, 23, 42];
+
+
+</script>	
+</footer>
+
+</html>
