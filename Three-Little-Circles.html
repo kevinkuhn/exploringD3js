@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"Three" Little Circles</title>
+<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+<h2>"Three" Little Circles</h2>
+
+<svg width="720" height="120">
+  <circle cx="40" cy="60" r="10"></circle>
+  <circle cx="80" cy="60" r="10"></circle>
+  <circle cx="120" cy="60" r="10"></circle>
+</svg>
+
+</body>
+
+<footer>
+<script type="text/javascript">
+
+	var svg = d3.select("svg");
+
+	// Adding a 4th circle
+	var circle = svg.selectAll("circle")
+		.data([32, 57, 112, 293])
+		.enter().append("circle")
+		.attr("cy", 60)
+		.attr("cx", function(d, i) { return i * 80 + 30; })
+		.attr("r", function(d) { return Math.sqrt(d); })
+		.style("fill", "steelblue");
+
+	// Making them having the same style
+	var circle = d3.selectAll("circle");
+	circle.style("fill", "steelblue");
+	circle.attr("r", function(d) { return Math.sqrt(d); });
+	circle.attr("cx", function(d, i) { return i * 100 + 30; });
+	
+</script>
+</footer>
+</html>
